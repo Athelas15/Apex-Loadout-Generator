@@ -16,35 +16,6 @@ Window = tkinter.Tk()
 Window.geometry("800x500")
 Window.title("Apex Loadout Randommiser")
 
-def Havoc(event):
-    random.choice(Gun_Attachments_Mags)
-    random.choice(Gun_Attachments_AR_Optics)
-    random.choice(Gun_Attachments_Stock)
-    random.choice(Gun_Attachments_Turbocharger)
-
-def Flatline(event):
-    random.choice(Gun_Attachments_Mags)
-    random.choice(Gun_Attachments_AR_Optics)
-    random.choice(Gun_Attachments_Stock)
-
-def Hemlock(event):
-    random.choice(Gun_Attachments_Barrel_Stabilizer)
-    random.choice(Gun_Attachments_Mags)
-    random.choice(Gun_Attachments_AR_Optics)
-    random.choice(Gun_Attachments_Stock)
-    random.choice(Gun_Attachments_Boosted_Loader)
-
-def R_301(event):
-    random.choice(Gun_Attachments_Barrel_Stabilizer)
-    random.choice(Gun_Attachments_Mags)
-    random.choice(Gun_Attachments_AR_Optics)
-    random.choice(Gun_Attachments_Stock)
-
-def Alternator(event):
-    random.choice(Gun_Attachments_Laser_Sight)
-    random.choice(Gun_Attachments_Mags)
-    random.choice(Gun_Attachments_SMG_Optics)
-    random.choice(Gun_Attachments_Stock)
 
 Gun_Attachments_Mags = [
     "Mag Level 1", 
@@ -98,6 +69,11 @@ Gun_Attachments_Boosted_Loader = [
     "Boosted Loader"
 ]
 
+Gun_attachments_Double_Tap = [
+    "None",
+    "Douple Tap"
+]
+
 Apex_Wapons = [
     "Havoc",
     "Flatline",
@@ -105,7 +81,7 @@ Apex_Wapons = [
     "R-301",
     "Alternator",
     "Prowler",
-    "R-99",
+    "R_99",
     "Volt",
     "Car",
     "Devotion",
@@ -123,6 +99,13 @@ Apex_Wapons = [
     "Re-45",
     "P2020",
     "Wingman"
+]
+
+Apex_Wapons_Test = [
+    "Havoc",
+    "Flatline",
+    "Hemlock",
+    "R-301"
 ]
 
 Apex_Wapons_Red = [
@@ -248,9 +231,109 @@ optics = {
     ["none", "1xholo", "classic", "1x2xvar", "bruiser", "digi"]}
 
 
+def Havoc(event):
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+    random.choice(Gun_Attachments_Turbocharger)
 
+Havoc_Attachments = [Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock, Gun_Attachments_Turbocharger]
 
+def Flatline(event):
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
 
+Flatline_Attachments = [Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock]
+
+def Hemlock(event):
+    random.choice(Gun_Attachments_Barrel_Stabilizer)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+    random.choice(Gun_Attachments_Boosted_Loader)
+
+Hemlock_Attachments = [Gun_Attachments_Barrel_Stabilizer, Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock, Gun_Attachments_Boosted_Loader]
+
+def R_301(event):
+    random.choice(Gun_Attachments_Barrel_Stabilizer)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+R_301_Attachments = [Gun_Attachments_Barrel_Stabilizer, Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock]
+
+def Alternator(event):
+    random.choice(Gun_Attachments_Laser_Sight)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_SMG_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+Alternator_Attachments = [Gun_Attachments_Laser_Sight, Gun_Attachments_Mags, Gun_Attachments_SMG_Optics, Gun_Attachments_Stock]
+
+def Prowler(event):
+    random.choice(Gun_Attachments_Laser_Sight)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_SMG_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+Prowler_Attachments = [Gun_Attachments_Laser_Sight, Gun_Attachments_Mags, Gun_Attachments_SMG_Optics, Gun_Attachments_Stock]
+
+def R_99(event):
+    random.choice(Gun_Attachments_Laser_Sight)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_SMG_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+R_99_Attachments = [Gun_Attachments_Laser_Sight, Gun_Attachments_Mags, Gun_Attachments_SMG_Optics, Gun_Attachments_Stock]
+
+def Volt(event):
+    random.choice(Gun_Attachments_Laser_Sight)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_SMG_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+Volt_Attachments = [Gun_Attachments_Laser_Sight, Gun_Attachments_Mags, Gun_Attachments_SMG_Optics, Gun_Attachments_Stock]
+
+def Car(event):
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_SMG_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+Car_Attachments = [Gun_Attachments_Mags, Gun_Attachments_SMG_Optics, Gun_Attachments_Stock]
+
+def Devotion(event):
+    random.choice(Gun_Attachments_Barrel_Stabilizer)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+    random.choice(Gun_Attachments_Turbocharger)
+
+Devotion_Attachments = [Gun_Attachments_Barrel_Stabilizer, Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock, Gun_Attachments_Turbocharger]
+
+def L_Star(event):
+    random.choice(Gun_Attachments_Barrel_Stabilizer)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+L_Star_Attachments = [Gun_Attachments_Barrel_Stabilizer, Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock]
+
+def Spitfire(event):
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+
+Spitfire_Attachments = [Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock]
+
+def Scout(event):
+    random.choice(Gun_Attachments_Barrel_Stabilizer)
+    random.choice(Gun_Attachments_Mags)
+    random.choice(Gun_Attachments_AR_Optics)
+    random.choice(Gun_Attachments_Stock)
+    random.choice(Gun_attachments_Double_Tap)
+
+Scout_Attachments = [Gun_Attachments_Barrel_Stabilizer, Gun_Attachments_Mags, Gun_Attachments_AR_Optics, Gun_Attachments_Stock, Gun_attachments_Double_Tap]
 
 #Batts
 Window_Content_Batts_Min = tkinter.Scale(Window,label="Min Batts", from_=0, to=48, orient=HORIZONTAL)
@@ -455,7 +538,20 @@ def Rand_Gun(event):
     Value_1 = ("Wapon 1: " + (str(Gun_Rand_Value_1)))
     Value_2 = ("Wapon 2: " + (str(Gun_Rand_Value_2)))
     Gun_Value_1.set(Value_1)
-    Gun_Value_2.set(Value_2)
+    Gun_Value_2.set(Value_2)  
+
+    Attachment_Min = Window_Content_Attachment_Min.get()
+    Attachment_Max = Window_Content_Attachment_Max.get()
+    Attachment_Rand_Value =random.randrange(Attachment_Min, Attachment_Max+1)
+    Value = ("Attachment Level: " + (str(Attachment_Rand_Value)))
+    #Value = ("Attachment Level: " + (str(Attachment_Rand_Value)))
+    #alue = ("Attachment Level: " + (str(Attachment_Rand_Value)))
+    #Value = ("Attachment Level: " + (str(Attachment_Rand_Value)))
+    #Value = ("Attachment Level: " + (str(Attachment_Rand_Value)))
+    Attachment_Value.set(Value)
+
+Attachment_Value = StringVar()
+
 
 
 Gun_Value_1 = StringVar()
@@ -464,9 +560,28 @@ Gun_Value_2 = StringVar()
 Gun_Display_2 = Label(Window, textvariable=Gun_Value_2)
 Gun_Button = Button(Window, text= "Generate Guns")
 Gun_Button.bind("<Button-1>", Rand_Gun)
-Gun_Button.grid(row=7, column=2)    
-Gun_Display_1.grid(row=8, column=2) 
-Gun_Display_2.grid(row=9, column=2)
+Gun_Button.grid(row=0, column=3)
+Gun_Display_1.grid(row=1, column=3) 
+Gun_Display_2.grid(row=2, column=3)
+
+Gun_Attachments_Value_1 = StringVar()
+Gun_Attachments_Value_2 = StringVar()
+Gun_Attachments_Display_1 = Label(Window, textvariable=Gun_Attachments_Value_1)
+Gun_Attachments_Display_2 = Label(Window, textvariable=Gun_Attachments_Value_2)
+
+Window_Content_Attachment_Min = tkinter.Scale(Window,label="Min Attachments" ,from_=0, to=4, orient=HORIZONTAL)
+Window_Content_Attachment_Max = tkinter.Scale(Window,label="Max Attachments" ,from_=0, to=4, orient=HORIZONTAL)
+Window_Content_Attachment_Min.set(1)
+Window_Content_Attachment_Max.set(4)
+Window_Content_Attachment_Min.grid(row=4, column=3)
+Window_Content_Attachment_Max.grid(row=5, column=3)
+
+
+Attachment_Value = StringVar()
+Attachment_Display = Label(Window, textvariable=Attachment_Value)
+Attachment_Display.grid(row=6, column=3)
+
+
 
 
 
