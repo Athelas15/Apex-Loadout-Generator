@@ -14,7 +14,7 @@ from tokenize import group
 
 Window = tkinter.Tk()
 Window.geometry("800x500")
-Window.title("Apex Loadout Randommiser")
+Window.title("Apex Loadout Randomiser")
 
 
 Gun_Attachments_Mags = [
@@ -74,7 +74,7 @@ Gun_attachments_Double_Tap = [
     "Douple Tap"
 ]
 
-Apex_Wapons = [
+Apex_weapons = [
     "Havoc",
     "Flatline",
     "Hemlock",
@@ -92,7 +92,7 @@ Apex_Wapons = [
     "30-30",
     "Charge Rifle",
     "Longbow",
-    "Senttinel",
+    "Sentinel",
     "Eva-8",
     "Mozambique",
     "Peacekeeper",
@@ -101,14 +101,14 @@ Apex_Wapons = [
     "Wingman"
 ]
 
-Apex_Wapons_Test = [
+Apex_weapons_Test = [
     "Havoc",
     "Flatline",
     "Hemlock",
     "R-301"
 ]
 
-Apex_Wapons_Red = [
+Apex_weapons_Red = [
     "Havoc",
     "Flatline",
     "Hemlock",
@@ -126,7 +126,7 @@ Apex_Wapons_Red = [
     "30-30",
     "Charge Rifle",
     "Longbow",
-    "Senttinel",
+    "Sentinel",
     "Eva-8",
     "Mozambique",
     "Peacekeeper",
@@ -161,7 +161,7 @@ Light_Machine_Guns = [
     "Spitfire"
 ]
 
-Marksman_Wapons = [
+Marksman_weapons = [
     "Scout",
     "Triple Take",
     "30-30"
@@ -170,7 +170,7 @@ Marksman_Wapons = [
 Sniper_Rifles = [
     "Charge Rifle",
     "Longbow",
-    "Senttinel"
+    "Sentinel"
 ]
 
 Shotguns = [
@@ -185,7 +185,7 @@ Pistols = [
     "Wingman"
 ]
 
-Red_Wapons = [
+Red_weapons = [
     "Rampage",
     "Bocek",
     "Kraber",
@@ -471,12 +471,12 @@ def Rand_Gear_Helmet(event):
     Gear_Value_Helmet.set(Value)
 
 
-def Rand_Gear_Armor(event):
+def Rand_Gear_Armour(event):
     Gear_Min = Window_Content_Gear_Min.get()
     Gear_Max = Window_Content_Gear_Max.get()
-    Gear_Rand_Value_Armor = random.randrange(Gear_Min, Gear_Max+1)
-    Value = ("Armor Level: " + (str(Gear_Rand_Value_Armor)))
-    Gear_Value_Armor.set(Value)
+    Gear_Rand_Value_Armour = random.randrange(Gear_Min, Gear_Max+1)
+    Value = ("Armour Level: " + (str(Gear_Rand_Value_Armour)))
+    Gear_Value_Armour.set(Value)
     
 
 def Rand_Gear_Shield(event):
@@ -497,20 +497,20 @@ def Rand_Gear_Backpack(event):
 
 Button_Gear = Button(Window, text="Generate Gear Level")
 Button_Gear.bind("<Button-1>", Rand_Gear_Helmet, add="+")
-Button_Gear.bind("<Button-1>", Rand_Gear_Armor, add="+")
+Button_Gear.bind("<Button-1>", Rand_Gear_Armour, add="+")
 Button_Gear.bind("<Button-1>", Rand_Gear_Shield, add="+")
 Button_Gear.bind("<Button-1>", Rand_Gear_Backpack, add="+")
 Button_Gear.grid(row=2, column=2)
 Gear_Value_Helmet = StringVar()
-Gear_Value_Armor = StringVar()
+Gear_Value_Armour = StringVar()
 Gear_Value_Shield = StringVar()           
 Gear_Value_Backpack = StringVar()
 Gear_Display_Helmet = Label(Window, textvariable=Gear_Value_Helmet)
-Gear_Display_Armor = Label(Window, textvariable=Gear_Value_Armor)
+Gear_Display_Armour = Label(Window, textvariable=Gear_Value_Armour)
 Gear_Display_Shield = Label(Window, textvariable=Gear_Value_Shield)
 Gear_Display_Backpack = Label(Window, textvariable=Gear_Value_Backpack)
 Gear_Display_Helmet.grid(row=3, column=2)
-Gear_Display_Armor.grid(row=4, column=2)
+Gear_Display_Armour.grid(row=4, column=2)
 Gear_Display_Shield.grid(row=5, column=2)
 Gear_Display_Backpack.grid(row=6, column=2)
 
@@ -533,10 +533,10 @@ Legend_Display.grid(row=9, column=1)
 
 #Guns
 def Rand_Gun(event):
-    Gun_Rand_Value_1 = random.choice(Apex_Wapons)
-    Gun_Rand_Value_2 = random.choice(Apex_Wapons)
-    Value_1 = ("Wapon 1: " + (str(Gun_Rand_Value_1)))
-    Value_2 = ("Wapon 2: " + (str(Gun_Rand_Value_2)))
+    Gun_Rand_Value_1 = random.choice(Apex_weapons_Red)
+    Gun_Rand_Value_2 = random.choice(Apex_weapons_Red)
+    Value_1 = ("weapon 1: " + (str(Gun_Rand_Value_1)))
+    Value_2 = ("weapon 2: " + (str(Gun_Rand_Value_2)))
     Gun_Value_1.set(Value_1)
     Gun_Value_2.set(Value_2)  
 
